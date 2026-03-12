@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics Dashboard - VIBE HAUS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/analytics-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="THE VIBE HAUS LOGO.png" alt="VIBE HAUS">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#gallery">Gallery</a></li>
+                <li><a href="index.html#advert">Advertise</a></li>
+                <li><a href="opportunities.html">Opportunities</a></li>
+                <li><a href="analytics-dashboard.html" class="active">Analytics</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <section class="analytics-dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Analytics Dashboard</h1>
+                <div class="date-filter">
+                    <select id="dateRange">
+                        <option value="7">Last 7 Days</option>
+                        <option value="30" selected>Last 30 Days</option>
+                        <option value="90">Last 90 Days</option>
+                        <option value="365">Last Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Total Page Views</h3>
+                        <p class="metric-value">1,234,567</p>
+                        <span class="metric-change positive">+12.5%</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Unique Visitors</h3>
+                        <p class="metric-value">89,012</p>
+                        <span class="metric-change positive">+8.3%</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Ad Clicks</h3>
+                        <p class="metric-value">45,678</p>
+                        <span class="metric-change positive">+15.7%</span>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <div class="metric-content">
+                        <h3>Engagement Rate</h3>
+                        <p class="metric-value">3.7%</p>
+                        <span class="metric-change positive">+2.1%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts-section">
+                <div class="chart-card">
+                    <h2>Page Views Over Time</h2>
+                    <canvas id="pageViewsChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h2>User Engagement</h2>
+                    <canvas id="engagementChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Ad Performance -->
+            <div class="ad-performance-section">
+                <h2>Advertisement Performance</h2>
+                <div class="ad-performance-list">
+                    <div class="ad-performance-item">
+                        <div class="ad-info">
+                            <h3>Homepage Banner</h3>
+                            <p>Cowbell Campaign</p>
+                        </div>
+                        <div class="ad-metrics">
+                            <div class="metric">
+                                <span class="label">Views</span>
+                                <span class="value">456,789</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">Clicks</span>
+                                <span class="value">18,234</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">CTR</span>
+                                <span class="value">3.99%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad-performance-item">
+                        <div class="ad-info">
+                            <h3>Event Page Sidebar</h3>
+                            <p>Summer Campaign</p>
+                        </div>
+                        <div class="ad-metrics">
+                            <div class="metric">
+                                <span class="label">Views</span>
+                                <span class="value">234,567</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">Clicks</span>
+                                <span class="value">9,456</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">CTR</span>
+                                <span class="value">4.03%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ad-performance-item">
+                        <div class="ad-info">
+                            <h3>Newsletter Placement</h3>
+                            <p>Brand Awareness</p>
+                        </div>
+                        <div class="ad-metrics">
+                            <div class="metric">
+                                <span class="label">Views</span>
+                                <span class="value">123,456</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">Clicks</span>
+                                <span class="value">7,890</span>
+                            </div>
+                            <div class="metric">
+                                <span class="label">CTR</span>
+                                <span class="value">6.39%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Pages -->
+            <div class="top-pages-section">
+                <h2>Top Performing Pages</h2>
+                <div class="top-pages-list">
+                    <div class="page-item">
+                        <div class="page-info">
+                            <h3>Home Page</h3>
+                            <p>/index.html</p>
+                        </div>
+                        <div class="page-stats">
+                            <span class="views">456,789 views</span>
+                            <span class="change positive">+15.3%</span>
+                        </div>
+                    </div>
+                    <div class="page-item">
+                        <div class="page-info">
+                            <h3>Events Page</h3>
+                            <p>/index.html#events</p>
+                        </div>
+                        <div class="page-stats">
+                            <span class="views">234,567 views</span>
+                            <span class="change positive">+12.7%</span>
+                        </div>
+                    </div>
+                    <div class="page-item">
+                        <div class="page-info">
+                            <h3>Opportunities</h3>
+                            <p>/opportunities.html</p>
+                        </div>
+                        <div class="page-stats">
+                            <span class="views">123,456 views</span>
+                            <span class="change positive">+18.2%</span>
+                        </div>
+                    </div>
+                    <div class="page-item">
+                        <div class="page-info">
+                            <h3>Gallery</h3>
+                            <p>/index.html#gallery</p>
+                        </div>
+                        <div class="page-stats">
+                            <span class="views">98,765 views</span>
+                            <span class="change positive">+9.8%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="THE VIBE HAUS LOGO.png" alt="VIBE HAUS">
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://snapchat.com/scan"><i class="fab fa-snapchat"></i></a>
+                </div>
+                <p class="copyright">&copy; 2024 VIBE HAUS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/analytics-dashboard.js"></script>
+</body>
+</html>
