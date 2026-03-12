@@ -1,0 +1,22 @@
+{
+  "name": "vhibs",
+  "version": "1.0.0",
+  "description": "VIBE HAUS - Modern Event Company Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve . -p 8080",
+    "dev": "npx live-server --port=8080"
+  },
+  "keywords": [
+    "events",
+    "nightlife",
+    "entertainment",
+    "vibes"
+  ],
+  "author": "VIBE HAUS",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.0"
+  }
+}
