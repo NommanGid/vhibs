@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - VIBE HAUS</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-header">
+                <img src="../THE VIBE HAUS LOGO.png" alt="VIBE HAUS" class="admin-logo">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-link active" data-section="dashboard">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link" data-section="pages">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Pages</span>
+                </a>
+                <a href="#" class="nav-link" data-section="events">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a>
+                <a href="#" class="nav-link" data-section="opportunities">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Opportunities</span>
+                </a>
+                <a href="#" class="nav-link" data-section="advertisements">
+                    <i class="fas fa-ad"></i>
+                    <span>Advertisements</span>
+                </a>
+                <a href="#" class="nav-link" data-section="users">
+                    <i class="fas fa-users"></i>
+                    <span>Users</span>
+                </a>
+                <a href="#" class="nav-link" data-section="settings">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../index.html" class="btn-view-site">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>View Site</span>
+                </a>
+                <a href="#" class="btn-logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-main">
+            <!-- Top Bar -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <button class="sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="page-title">Dashboard</h1>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <img src="https://via.placeholder.com/40" alt="Admin" class="user-avatar">
+                        <span class="user-name">Admin User</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Section -->
+            <section class="admin-section active" id="dashboard">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Total Page Views</h3>
+                            <p class="stat-value">12,458</p>
+                            <span class="stat-trend positive">+12.5%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Active Users</h3>
+                            <p class="stat-value">2,847</p>
+                            <span class="stat-trend positive">+8.2%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Upcoming Events</h3>
+                            <p class="stat-value">15</p>
+                            <span class="stat-trend neutral">0%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="stat-content">
+                            <h3>Active Opportunities</h3>
+                            <p class="stat-value">28</p>
+                            <span class="stat-trend positive">+5.3%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New page created</h4>
+                                <p>External Events page was created</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-calendar-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New event added</h4>
+                                <p>Summer Music Festival was added to events</p>
+                                <span class="activity-time">5 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>New user registered</h4>
+                                <p>John Doe joined the community</p>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pages Management Section -->
+            <section class="admin-section" id="pages">
+                <div class="section-header">
+                    <h2>Pages Management</h2>
+                    <button class="btn btn-primary" onclick="openPageModal()">
+                        <i class="fas fa-plus"></i>
+                        Add New Page
+                    </button>
+                </div>
+                <div class="pages-list">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Page Name</th>
+                                <th>URL</th>
+                                <th>Last Modified</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Home</td>
+                                <td>index.html</td>
+                                <td>2024-01-15</td>
+                                <td><span class="status-badge published">Published</span></td>
+                                <td>
+                                    <button class="btn-action edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action view" title="View"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Opportunities</td>
+                                <td>opportunities.html</td>
+                                <td>2024-01-14</td>
+                                <td><span class="status-badge published">Published</span></td>
+                                <td>
+                                    <button class="btn-action edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action view" title="View"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>External Events</td>
+                                <td>external-events.html</td>
+                                <td>2024-01-13</td>
+                                <td><span class="status-badge published">Published</span></td>
+                                <td>
+                                    <button class="btn-action edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action view" title="View"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Analytics Dashboard</td>
+                                <td>analytics-dashboard.html</td>
+                                <td>2024-01-12</td>
+                                <td><span class="status-badge published">Published</span></td>
+                                <td>
+                                    <button class="btn-action edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action view" title="View"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Advertiser Portal</td>
+                                <td>advertiser-portal.html</td>
+                                <td>2024-01-11</td>
+                                <td><span class="status-badge published">Published</span></td>
+                                <td>
+                                    <button class="btn-action edit" title="Edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action view" title="View"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action delete" title="Delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Events Management Section -->
+            <section class="admin-section" id="events">
+                <div class="section-header">
+                    <h2>Events Management</h2>
+                    <button class="btn btn-primary" onclick="openEventModal()">
+                        <i class="fas fa-plus"></i>
+                        Add New Event
+                    </button>
+                </div>
+                <div class="events-list">
+                    <div class="event-card">
+                        <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=400" alt="Event">
+                        <div class="event-info">
+                            <h3>Summer Music Festival</h3>
+                            <p class="event-date">July 15, 2024</p>
+                            <p class="event-location">Central Park, New York</p>
+                            <div class="event-actions">
+                                <button class="btn-action edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn-action delete"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <img src="https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?w=400" alt="Event">
+                        <div class="event-info">
+                            <h3>Art Exhibition Opening</h3>
+                            <p class="event-date">June 20, 2024</p>
+                            <p class="event-location">MoMA, New York</p>
+                            <div class="event-actions">
+                                <button class="btn-action edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn-action delete"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Opportunities Management Section -->
+            <section class="admin-section" id="opportunities">
+                <div class="section-header">
+                    <h2>Opportunities Management</h2>
+                    <button class="btn btn-primary" onclick="openOpportunityModal()">
+                        <i class="fas fa-plus"></i>
+                        Add New Opportunity
+                    </button>
+                </div>
+                <div class="opportunities-list">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Company</th>
+                                <th>Type</th>
+                                <th>Location</th>
+                                <th>Applications</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Marketing Intern</td>
+                                <td>VIBE HAUS</td>
+                                <td>Internship</td>
+                                <td>Remote</td>
+                                <td>24</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Graphic Designer</td>
+                                <td>Creative Studio</td>
+                                <td>Full-time</td>
+                                <td>New York</td>
+                                <td>18</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Brand Collaboration</td>
+                                <td>Fashion Brand</td>
+                                <td>Collaboration</td>
+                                <td>Los Angeles</td>
+                                <td>12</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Advertisements Management Section -->
+            <section class="admin-section" id="advertisements">
+                <div class="section-header">
+                    <h2>Advertisements Management</h2>
+                    <button class="btn btn-primary" onclick="openAdModal()">
+                        <i class="fas fa-plus"></i>
+                        Add New Ad
+                    </button>
+                </div>
+                <div class="ads-list">
+                    <div class="ad-card">
+                        <img src="https://via.placeholder.com/400x200" alt="Advertisement">
+                        <div class="ad-info">
+                            <h3>Summer Campaign</h3>
+                            <p class="ad-client">Client: Fashion Brand</p>
+                            <p class="ad-dates">June 1 - August 31, 2024</p>
+                            <div class="ad-stats">
+                                <span><i class="fas fa-eye"></i> 12,458 views</span>
+                                <span><i class="fas fa-mouse-pointer"></i> 856 clicks</span>
+                            </div>
+                            <div class="ad-actions">
+                                <button class="btn-action edit"><i class="fas fa-edit"></i> Edit</button>
+                                <button class="btn-action delete"><i class="fas fa-trash"></i> Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Users Management Section -->
+            <section class="admin-section" id="users">
+                <div class="section-header">
+                    <h2>Users Management</h2>
+                    <button class="btn btn-primary" onclick="openUserModal()">
+                        <i class="fas fa-plus"></i>
+                        Add New User
+                    </button>
+                </div>
+                <div class="users-list">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>Status</th>
+                                <th>Last Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <img src="https://via.placeholder.com/40" alt="User">
+                                        <span>John Doe</span>
+                                    </div>
+                                </td>
+                                <td>john@example.com</td>
+                                <td>Admin</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>2 hours ago</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <img src="https://via.placeholder.com/40" alt="User">
+                                        <span>Jane Smith</span>
+                                    </div>
+                                </td>
+                                <td>jane@example.com</td>
+                                <td>Editor</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>5 hours ago</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <img src="https://via.placeholder.com/40" alt="User">
+                                        <span>Mike Johnson</span>
+                                    </div>
+                                </td>
+                                <td>mike@example.com</td>
+                                <td>User</td>
+                                <td><span class="status-badge inactive">Inactive</span></td>
+                                <td>1 week ago</td>
+                                <td>
+                                    <button class="btn-action edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Settings Section -->
+            <section class="admin-section" id="settings">
+                <h2>Settings</h2>
+                <div class="settings-container">
+                    <div class="settings-group">
+                        <h3>General Settings</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Site Title</label>
+                                <input type="text" value="VIBE HAUS">
+                            </div>
+                            <div class="form-group">
+                                <label>Site Description</label>
+                                <textarea rows="4">A modern event company serving the creative community</textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Contact Email</label>
+                                <input type="email" value="info@vibehaus.com">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                    <div class="settings-group">
+                        <h3>Security Settings</h3>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Admin Email</label>
+                                <input type="email" value="admin@vibehaus.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" value="********">
+                            </div>
+                            <div class="form-group">
+                                <label>Two-Factor Authentication</label>
+                                <select>
+                                    <option value="disabled">Disabled</option>
+                                    <option value="enabled">Enabled</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal" id="pageModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Page</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form id="pageForm">
+                <div class="form-group">
+                    <label>Page Title</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Page URL</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Content</label>
+                    <textarea rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Status</label>
+                    <select>
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Page</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
