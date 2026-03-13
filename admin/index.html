@@ -350,23 +350,308 @@
                         Add New Ad
                     </button>
                 </div>
-                <div class="ads-list">
-                    <div class="ad-card">
-                        <img src="https://via.placeholder.com/400x200" alt="Advertisement">
-                        <div class="ad-info">
-                            <h3>Summer Campaign</h3>
-                            <p class="ad-client">Client: Fashion Brand</p>
-                            <p class="ad-dates">June 1 - August 31, 2024</p>
-                            <div class="ad-stats">
-                                <span><i class="fas fa-eye"></i> 12,458 views</span>
-                                <span><i class="fas fa-mouse-pointer"></i> 856 clicks</span>
+
+                <!-- Ad Stats Overview -->
+                <div class="ads-stats-grid">
+                    <div class="ad-stat-card">
+                        <div class="ad-stat-icon">
+                            <i class="fas fa-ad"></i>
+                        </div>
+                        <div class="ad-stat-content">
+                            <h3>Total Ads</h3>
+                            <p class="ad-stat-value">24</p>
+                            <span class="ad-stat-trend positive"><i class="fas fa-arrow-up"></i> +3 this month</span>
+                        </div>
+                    </div>
+                    <div class="ad-stat-card">
+                        <div class="ad-stat-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="ad-stat-content">
+                            <h3>Total Views</h3>
+                            <p class="ad-stat-value">1.2M</p>
+                            <span class="ad-stat-trend positive"><i class="fas fa-arrow-up"></i> +12.5%</span>
+                        </div>
+                    </div>
+                    <div class="ad-stat-card">
+                        <div class="ad-stat-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <div class="ad-stat-content">
+                            <h3>Total Clicks</h3>
+                            <p class="ad-stat-value">45.8K</p>
+                            <span class="ad-stat-trend positive"><i class="fas fa-arrow-up"></i> +8.3%</span>
+                        </div>
+                    </div>
+                    <div class="ad-stat-card">
+                        <div class="ad-stat-icon">
+                            <i class="fas fa-percentage"></i>
+                        </div>
+                        <div class="ad-stat-content">
+                            <h3>Avg CTR</h3>
+                            <p class="ad-stat-value">3.8%</p>
+                            <span class="ad-stat-trend neutral"><i class="fas fa-minus"></i> 0.0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters and Search -->
+                <div class="ads-filters">
+                    <div class="filter-group">
+                        <input type="text" class="search-input" placeholder="Search advertisements...">
+                        <i class="fas fa-search search-icon"></i>
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option value="">All Status</option>
+                            <option value="active">Active</option>
+                            <option value="paused">Paused</option>
+                            <option value="ended">Ended</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option value="">All Categories</option>
+                            <option value="banner">Banner</option>
+                            <option value="sidebar">Sidebar</option>
+                            <option value="popup">Popup</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option value="">Sort by</option>
+                            <option value="date">Date Added</option>
+                            <option value="views">Views</option>
+                            <option value="clicks">Clicks</option>
+                            <option value="ctr">CTR</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Ads Grid -->
+                <div class="ads-grid">
+                    <div class="ad-item">
+                        <div class="ad-preview">
+                            <img src="https://via.placeholder.com/400x200" alt="Advertisement">
+                            <div class="ad-status-badge active">
+                                <i class="fas fa-circle"></i> Active
+                            </div>
+                        </div>
+                        <div class="ad-details">
+                            <div class="ad-header">
+                                <h3 class="ad-title">Summer Campaign</h3>
+                                <span class="ad-category">Banner</span>
+                            </div>
+                            <div class="ad-client">
+                                <i class="fas fa-building"></i>
+                                Fashion Brand
+                            </div>
+                            <div class="ad-period">
+                                <i class="fas fa-calendar-alt"></i>
+                                June 1 - August 31, 2024
+                            </div>
+                            <div class="ad-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Views</span>
+                                    <span class="metric-value">12,458</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Clicks</span>
+                                    <span class="metric-value">856</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">CTR</span>
+                                    <span class="metric-value">6.9%</span>
+                                </div>
                             </div>
                             <div class="ad-actions">
-                                <button class="btn-action edit"><i class="fas fa-edit"></i> Edit</button>
-                                <button class="btn-action delete"><i class="fas fa-trash"></i> Delete</button>
+                                <button class="btn-action edit" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-action pause" title="Pause">
+                                    <i class="fas fa-pause"></i>
+                                </button>
+                                <button class="btn-action view" title="View Analytics">
+                                    <i class="fas fa-chart-line"></i>
+                                </button>
+                                <button class="btn-action delete" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
+
+                    <div class="ad-item">
+                        <div class="ad-preview">
+                            <img src="https://via.placeholder.com/400x200" alt="Advertisement">
+                            <div class="ad-status-badge active">
+                                <i class="fas fa-circle"></i> Active
+                            </div>
+                        </div>
+                        <div class="ad-details">
+                            <div class="ad-header">
+                                <h3 class="ad-title">Product Launch</h3>
+                                <span class="ad-category">Sidebar</span>
+                            </div>
+                            <div class="ad-client">
+                                <i class="fas fa-building"></i>
+                                Tech Company
+                            </div>
+                            <div class="ad-period">
+                                <i class="fas fa-calendar-alt"></i>
+                                July 15 - September 30, 2024
+                            </div>
+                            <div class="ad-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Views</span>
+                                    <span class="metric-value">8,234</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Clicks</span>
+                                    <span class="metric-value">412</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">CTR</span>
+                                    <span class="metric-value">5.0%</span>
+                                </div>
+                            </div>
+                            <div class="ad-actions">
+                                <button class="btn-action edit" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-action pause" title="Pause">
+                                    <i class="fas fa-pause"></i>
+                                </button>
+                                <button class="btn-action view" title="View Analytics">
+                                    <i class="fas fa-chart-line"></i>
+                                </button>
+                                <button class="btn-action delete" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ad-item">
+                        <div class="ad-preview">
+                            <img src="https://via.placeholder.com/400x200" alt="Advertisement">
+                            <div class="ad-status-badge paused">
+                                <i class="fas fa-pause-circle"></i> Paused
+                            </div>
+                        </div>
+                        <div class="ad-details">
+                            <div class="ad-header">
+                                <h3 class="ad-title">Brand Awareness</h3>
+                                <span class="ad-category">Popup</span>
+                            </div>
+                            <div class="ad-client">
+                                <i class="fas fa-building"></i>
+                                Lifestyle Brand
+                            </div>
+                            <div class="ad-period">
+                                <i class="fas fa-calendar-alt"></i>
+                                May 1 - July 31, 2024
+                            </div>
+                            <div class="ad-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Views</span>
+                                    <span class="metric-value">15,678</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Clicks</span>
+                                    <span class="metric-value">623</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">CTR</span>
+                                    <span class="metric-value">4.0%</span>
+                                </div>
+                            </div>
+                            <div class="ad-actions">
+                                <button class="btn-action edit" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-action play" title="Resume">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                                <button class="btn-action view" title="View Analytics">
+                                    <i class="fas fa-chart-line"></i>
+                                </button>
+                                <button class="btn-action delete" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ad-item">
+                        <div class="ad-preview">
+                            <img src="https://via.placeholder.com/400x200" alt="Advertisement">
+                            <div class="ad-status-badge ended">
+                                <i class="fas fa-stop-circle"></i> Ended
+                            </div>
+                        </div>
+                        <div class="ad-details">
+                            <div class="ad-header">
+                                <h3 class="ad-title">Spring Sale</h3>
+                                <span class="ad-category">Banner</span>
+                            </div>
+                            <div class="ad-client">
+                                <i class="fas fa-building"></i>
+                                Retail Store
+                            </div>
+                            <div class="ad-period">
+                                <i class="fas fa-calendar-alt"></i>
+                                March 1 - May 31, 2024
+                            </div>
+                            <div class="ad-metrics">
+                                <div class="metric">
+                                    <span class="metric-label">Views</span>
+                                    <span class="metric-value">22,456</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">Clicks</span>
+                                    <span class="metric-value">1,234</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-label">CTR</span>
+                                    <span class="metric-value">5.5%</span>
+                                </div>
+                            </div>
+                            <div class="ad-actions">
+                                <button class="btn-action edit" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button class="btn-action duplicate" title="Duplicate">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                                <button class="btn-action view" title="View Analytics">
+                                    <i class="fas fa-chart-line"></i>
+                                </button>
+                                <button class="btn-action delete" title="Delete">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pagination -->
+                <div class="ads-pagination">
+                    <button class="btn-pagination" disabled>
+                        <i class="fas fa-chevron-left"></i>
+                        Previous
+                    </button>
+                    <div class="pagination-numbers">
+                        <button class="btn-pagination active">1</button>
+                        <button class="btn-pagination">2</button>
+                        <button class="btn-pagination">3</button>
+                        <span class="pagination-dots">...</span>
+                        <button class="btn-pagination">10</button>
+                    </div>
+                    <button class="btn-pagination">
+                        Next
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </section>
 

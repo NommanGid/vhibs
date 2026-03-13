@@ -588,3 +588,308 @@ body {
     flex-direction: column;
     gap: 1.5rem;
 }
+
+/* Advertisements Management Styles */
+.ads-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.ad-stat-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ad-stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ad-stat-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: white;
+}
+
+.ad-stat-content h3 {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.ad-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.ad-stat-trend {
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.ad-stat-trend.positive {
+    color: var(--success-color);
+}
+
+.ad-stat-trend.negative {
+    color: var(--danger-color);
+}
+
+.ad-stat-trend.neutral {
+    color: var(--text-secondary);
+}
+
+/* Ads Filters */
+.ads-filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    background-color: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.search-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-secondary);
+}
+
+.filter-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* Ads Grid */
+.ads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.ad-item {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ad-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ad-preview {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.ad-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ad-status-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+}
+
+.ad-status-badge.active {
+    color: var(--success-color);
+}
+
+.ad-status-badge.paused {
+    color: var(--warning-color);
+}
+
+.ad-status-badge.ended {
+    color: var(--danger-color);
+}
+
+.ad-status-badge i {
+    font-size: 0.5rem;
+}
+
+.ad-details {
+    padding: 1.5rem;
+}
+
+.ad-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.ad-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ad-category {
+    padding: 0.25rem 0.75rem;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.ad-client {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ad-period {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.ad-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1rem;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 0.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.metric-value {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.ad-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.ad-actions .btn-action {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.625rem;
+    background-color: var(--dark-bg);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+.ad-actions .btn-action:hover {
+    color: var(--primary-color);
+    background-color: rgba(139, 92, 246, 0.1);
+}
+
+.ad-actions .btn-action.pause:hover {
+    color: var(--warning-color);
+    background-color: rgba(245, 158, 11, 0.1);
+}
+
+.ad-actions .btn-action.delete:hover {
+    color: var(--danger-color);
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+/* Responsive Design for Ads */
+@media (max-width: 768px) {
+    .ads-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ads-filters {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        min-width: 100%;
+    }
+
+    .ads-grid {
+        grid-template-columns: 1fr;
+    }
+}
